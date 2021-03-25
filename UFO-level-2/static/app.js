@@ -7,10 +7,8 @@ var tbody = d3.select("tbody")
 
 //print each data element
 data.forEach(function(UFOsiting) {
-    // console.log(UFOsiting)
     var row = tbody.append("tr")
     Object.entries(UFOsiting).forEach(function([key, value]) {
-        // console.log(key, value);
         var dataElement = row.append("td")
         dataElement.text(value)
       });
@@ -31,8 +29,6 @@ function filterList() {
   
   //clear table body
   tbody.text("")
-
-  console.log(inputValue)
   
   //filter data for date entered
   filteredData = data.filter(d => d.datetime === inputValue)
@@ -40,10 +36,8 @@ function filterList() {
   filteredData.forEach(function(UFOsiting) {
     
       // Prevent the page from refreshing
-    // console.log(UFOsiting)
     var row = tbody.append("tr")
     Object.entries(UFOsiting).forEach(function([key, value]) {
-        // console.log(key, value);
         var dataElement = row.append("td")
         dataElement.text(value)
       });
